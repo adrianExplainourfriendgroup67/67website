@@ -5,6 +5,34 @@
   <meta charset="UTF-8">
   <title>Adrian explain our website</title>
   <style>
+
+    body {
+  font-family: Arial, sans-serif;
+  /* Remove background-color if you want the image visible */
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Feditorials%2Ficons%2Fmobile%2F000%2F014%2F007%2F67-kid.jpg&f=1&nofb=1&ipt=d9c104debb327ffb47926573a531a07a702d9feaf9c01e0b3815c9a42ba76f21'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+/* Add this for semi-transparent overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay with 50% opacity */
+  z-index: -1; /* behind everything */
+}
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f8f8ff;
