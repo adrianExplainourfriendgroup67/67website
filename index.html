@@ -28,6 +28,31 @@
       text-align: center;
     }
 
+    /* Adrian SFX button */
+    .sfx-button {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: red;
+      color: white;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
+      margin: 20px auto; /* center under header */
+      display: block;
+    }
+
+    .sfx-button:hover {
+      transform: scale(1.1);
+    }
+
+    .sfx-button:active {
+      transform: scale(0.95);
+    }
+
     /* Container for memes with scroll if too long */
     .meme-container {
       display: grid;
@@ -72,6 +97,10 @@
     Adrian explain our website
   </header>
 
+  <!-- Adrian SFX Button -->
+  <button class="sfx-button" onclick="playAdrian()">ADRIAN SFX</button>
+  <audio id="adrian-audio" src="https://www.myinstants.com/media/sounds/adrian-explain-our-friend-group.mp3"></audio>
+
   <div class="meme-container">
     <div class="meme">
       <img src="https://i.kym-cdn.com/entries/icons/original/000/043/752/fgcover.jpg" alt="adrian">
@@ -86,7 +115,7 @@
       <p>steven here</p>
     </div>
     <div class="meme">
-      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic126%2Fv4%2F88%2F9c%2F6f%2F889c6fd6-2445-7208-6a41-18a909b48c28%2Fartwork.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=83294c736edbae5280cd40a34875de825644c4dc8b5e04f7c89d39782833c725" alt="low taper fade">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/88/9c/6f/889c6fd6-2445-7208-6a41-18a909b48c28/artwork.jpg/1200x1200bf-60.jpg" alt="low taper fade">
       <p>its massive</p>
     </div>
   </div>
@@ -94,6 +123,14 @@
   <footer>
     Made by Steven, Adrian, and Enrique
   </footer>
+
+  <script>
+    function playAdrian() {
+      const audio = document.getElementById('adrian-audio');
+      audio.currentTime = 0; // restart if clicked again
+      audio.play();
+    }
+  </script>
 
 </body>
 </html>
