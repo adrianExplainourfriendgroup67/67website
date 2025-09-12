@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>adrian's website</title>
+  <link rel="icon" type="image/png" href="files/67KID.png ">
+  <style>
+    /* Make page take full height */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8ff;
+      color: #fff;
+    }
+
+    /* Wrapper to push footer to bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+     background-image: url('files/67.jpg'); /* replace with your image */
+       background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    }
+
+   .top-bar {
+  display: flex;
+  justify-content: space-between; /* buttons on left, header on right */
+  align-items: center;            /* vertically center both */
+  background: #7ea4af;
+  padding: 10px 20px;
+}
+
+    footer {
+      background: #7ea4af;
+       color: #d1d3d1;
+  font-size: 1em;
+  font-weight: bold;
+      padding: 10px;
+      text-align: left;
+    }
+
+  .nav-grid {
+  display: flex; /* horizontal row of buttons */
+  gap: 10px;     /* spacing between buttons */
+}
+
+
+.nav-grid button {
+  background: #4ce6e6;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-grid button:hover {
+  background: #2cb6b6;
+}
+
+ header {
+      background: #7ea4af;
+      color: #d1d3d1;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: left;
+    }
+
+
+      .button-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 3 per row */
+      gap: 20px;
+      padding: 10px;
+      flex: 1; /* take remaining space */
+      overflow-y: auto; /* scroll if content too long */
+    }
+
+    /* SFX button */
+    .sfx-button {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background-color: rgb(250, 116, 116);
+      color: rgb(255, 255, 255);
+      font-size: 2.5em;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgb(199, 63, 63);
+      transition: transform 0.2s;
+      margin: 40px auto; /* center under top bar */
+      display: block;
+    }
+
+
+    .sfx-button:hover {
+      transform: scale(1.25);
+    }
+
+    .sfx-button:active {
+      transform: scale(0.75);
+    }
+
+
+  </style>
+ <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur1.ani), url(https://cur.cursors-4u.net/cursors/cur-1/cur1.png), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2005/04/21/cur1-11.html" target="_blank" title="Electricity Lightning"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Electricity Lightning" style="position:absolute; top: 0px; right: 0px;" /></a>
+</head>
+<body>
+
+  <div class="top-bar">
+      <header>adrian's website</header>
+  <div class="nav-grid">
+    <a href="index.html" target="_self">
+  <button>Main Page</button>
+</a>
+
+<a href="sounds.html" target="_self">
+  <button>Meme Sounds</button>
+</a>
+
+<a href="aboutus.html" target="_self">
+  <button>About Us</button>
+</a>
+  </div>
+  
+</div>
+
+ <div class="button-container">
+    <button class="sfx-button" onclick="playSound('adrian')">adrian</button>
+    <audio id="adrian" src="https://www.myinstants.com/media/sounds/adrian-explain-our-friend-group.mp3"></audio>
+
+    <button class="sfx-button" onclick="playSound('fries')">my mother ate fries</button>
+    <audio id="fries" src="https://www.myinstants.com/media/sounds/my-mother-ate-fries_Iw5egij.mp3"></audio>
+
+     <button class="sfx-button" onclick="playSound('steven')">steven here</button>
+    <audio id="steven" src="https://www.myinstants.com/media/sounds/steven-here.mp3"></audio>
+
+    <button class="sfx-button" onclick="playSound('lowtaperfade')">low taper fade</button>
+    <audio id="lowtaperfade" src="https://www.myinstants.com/media/sounds/lowtaper-fade.mp3"></audio>
+
+     <button class="sfx-button" onclick="playSound('johntontraviontavious')">johnton</button>
+    <audio id="johntontraviontavious" src="files/Johntontraviontavious.mp3"></audio>
+    <button class="sfx-button" onclick="playSound('sendy')">lets get sendyy</button>
+    <audio id="sendy" src="files/sendy.mp3"></audio>
+ </div>
+<script>
+function playSound(soundId) {
+  const audio = document.getElementById(soundId);
+  audio.currentTime = 0; // restart if clicked again
+  audio.play();
+}
+</script>
+
+
+  <footer>
+    Undefy Fans™ 
+  </footer>
+
+</body>
+</html>
